@@ -7,8 +7,7 @@ for connection in data:
     orbit_list[y] = x
 
 counter_1 = 0
-you = []
-san = []
+you, san = [], []
 for element in orbit_list.keys():
     current = element
     if current == 'YOU':
@@ -24,8 +23,6 @@ for element in orbit_list.keys():
         if list_san:
             san.append(current)
         counter_1 += 1
-print(you)
-print(san)
-print(len(set(you) ^ set(san)))
 
 print('Result 1: ', counter_1)
+print('Result 2: ', len(set(you) ^ set(san)))
